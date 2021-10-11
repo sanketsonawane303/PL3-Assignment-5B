@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem Statement 2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="content">
+      <header><h1>Problem Statement 2</h1></header>
+
+      <h2>Problem Statement</h2>
+      <p>
+        Write a code in any programming language that converts Cenverts binary
+        number to decimal number
+      </p>
+
+      <hr />
+
+      <h2>Code</h2>
+      <pre>
+        <code>
+          #include &lt;iostream&gt;
+          using namespace std;
+          
+          int binaryToDecimal(int <var>n</var>) {
+            int <var>num</var> = <var>n</var>;
+            int <var>dec_value</var> = 0;
+        
+            int <var>base</var> = 1;
+        
+            int <var>temp</var> = <var>num</var>;
+            while (<var>temp</var>) {
+              int <var>last_digit</var> = <var>temp</var> % 10;
+              <var>temp</var> /= 10;
+      
+              <var>dec_value</var> += <var>last_digit</var> * <var>base</var>;
+      
+              <var>base</var> *= 2;
+            }
+          
+            return <var>dec_value</var>;
+          }
+          
+          int main() {
+            int <var>num</var>;
+            cin >> <var>num</var>;
+            cout << binaryToDecimal(<var>num</var>) << endl;
+          }
+        </code>
+      </pre>
+
+      <hr />
+
+      <h2>Sample Input</h2>
+      <pre>
+        <kbd>
+          10101001
+        </kbd>
+      </pre>
+
+      <hr />
+
+      <h2>Sample Output</h2>
+      <pre>
+        <samp>
+          169
+        </samp>
+      </pre>
+
+      <hr />
+
+      <h2>Time Complexity</h2>
+      <pre>
+        <code>
+          O(no. of bits)
+        </code>
+      </pre>
+
+      <footer>&copy; T6 - 2019BTECS00048</footer>
+    </div>
+  </body>
+</html>
